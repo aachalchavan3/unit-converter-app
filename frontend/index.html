@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Unit Converter</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+    <h1><i class="fa-solid fa-arrows-rotate"></i> Unit Converter</h1>
+
+    <div class="input-group">
+        <label><i class="fa-solid fa-keyboard"></i> Enter Value</label>
+        <input type="number" id="value" placeholder="Enter value">
+    </div>
+
+    <div class="row">
+        <div>
+            <label><i class="fa-solid fa-arrow-right-arrow-left"></i> From</label>
+            <select id="from">
+                <option value="m">Meter</option>
+                <option value="km">Kilometer</option>
+
+                <option value="kg">Kilogram</option>
+                <option value="g">Gram</option>
+
+                <option value="sec">Second</option>
+                <option value="min">Minute</option>
+
+                <option value="c">Celsius</option>
+                <option value="f">Fahrenheit</option>
+            </select>
+        </div>
+
+        <button class="swap-btn" onclick="swap()">
+            <i class="fa-solid fa-right-left"></i>
+        </button>
+
+        <div>
+            <label><i class="fa-solid fa-bullseye"></i> To</label>
+            <select id="to">
+                <option value="km">Kilometer</option>
+                <option value="m">Meter</option>
+
+                <option value="g">Gram</option>
+                <option value="kg">Kilogram</option>
+
+                <option value="min">Minute</option>
+                <option value="sec">Second</option>
+
+                <option value="f">Fahrenheit</option>
+                <option value="c">Celsius</option>
+            </select>
+        </div>
+    </div>
+
+    <button class="convert-btn" onclick="convert()">
+        <i class="fa-solid fa-bolt"></i> Convert
+    </button>
+
+    <!-- Result -->
+    <div id="result">Result will appear here</div>
+
+    <!-- History Section -->
+    <div class="history-container">
+        <h3>📜 Conversion History</h3>
+
+        <button class="clear-btn" onclick="clearHistory()">
+            🗑 Clear History
+        </button>
+
+        <ul id="history"></ul>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

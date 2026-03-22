@@ -1,0 +1,197 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Card */
+.container {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    width: 360px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    animation: fadeIn 1s ease;
+}
+
+/* Fade animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Title */
+h1 {
+    margin-bottom: 15px;
+}
+
+/* Input */
+.input-group {
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+/* Focus effect */
+input:focus, select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 8px #667eea;
+}
+
+/* Row */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Swap button */
+.swap-btn {
+    margin: 0 10px;
+    padding: 12px;
+    border-radius: 50%;
+    border: none;
+    background: #667eea;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.swap-btn:hover {
+    transform: rotate(180deg);
+    background: #764ba2;
+}
+
+/* Convert button */
+.convert-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #667eea, #764ba2);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.convert-btn:hover {
+    transform: scale(1.05);
+}
+
+/* Result */
+#result {
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+#result.show {
+    opacity: 1;
+}
+
+/* ===================== */
+/* HISTORY SECTION 🔥 */
+/* ===================== */
+
+.history-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+/* Clear button */
+.clear-btn {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.clear-btn:hover {
+    background: #cc0000;
+    transform: scale(1.05);
+}
+
+/* History list */
+#history {
+    list-style: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+/* Each item */
+#history li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f5f5f5;
+    margin: 5px 0;
+    padding: 8px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    animation: slideIn 0.3s ease;
+}
+
+/* Delete button inside history */
+#history li button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    color: #ff4d4d;
+    transition: 0.2s;
+}
+
+#history li button:hover {
+    transform: scale(1.2);
+}
+
+/* Animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scrollbar */
+#history::-webkit-scrollbar {
+    width: 5px;
+}
+
+#history::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 10px;
+}
