@@ -20,5 +20,8 @@ A smart and simple unit converter built using **Flask (backend)** and **JavaScri
 3. Run: `python app.py`
 4. Open browser at http://127.0.0.1:5000
 
+📸 Screenshot
+![App Screenshot](converter.png)
+
 
  
